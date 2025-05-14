@@ -1,0 +1,8 @@
+torch==2.5.1
+torchvision==0.20.1
+webdataset==0.2.86
+ftfy==6.3.1
+regex==2024.11.6
+nltk==3.9.1
+pandas==2.2.3
+braceexpand==0.1.7
