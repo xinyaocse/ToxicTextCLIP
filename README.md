@@ -3,7 +3,7 @@
 # ToxicTextCLIP: Text-Based Poisoning and Backdoor Attacks on CLIP Pre-training
 
 ![NeurIPS 2025](https://img.shields.io/badge/NeurIPS--2025-Accepted-blueviolet)</br>
-📰 [Paper](https://neurips.cc/virtual/2025/loc/san-diego/poster/118322), 🪧[Poster](https://neurips.cc/media/PosterPDFs/NeurIPS%202025/118322.png?t=1761923812.5511887)
+📰 [Paper](https://arxiv.org/abs/2511.00446), 🪧[Poster](https://neurips.cc/media/PosterPDFs/NeurIPS%202025/118322.png?t=1761923812.5511887)
 </div>
 
 ## 🆕 What's New?
