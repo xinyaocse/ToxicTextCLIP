@@ -42,11 +42,37 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 
 We evaluate ToxicTextCLIP on three widely-used large-scale image–text datasets: **CC3M**, **CC12M**, and a 15-million-sample subset of YFCC, referred to as **YFCC15M**. In addition, the **COCO** dataset is used as our **evaluation benchmark**, allowing us to measure both attacks success rate (ASR).
 
-- **CC3M** and **CC12M** are downloaded and preprocessed using the [img2dataset][https://github.com/rom1504/img2dataset] tool.
-- **YFCC15M** is obtained from the following [HuggingFace dataset][https://huggingface.co/datasets/Kaichengalex/YFCC15M].
+- **CC3M** and **CC12M** are downloaded and preprocessed using the [img2dataset](https://github.com/rom1504/img2dataset) tool.
+- **YFCC15M** is obtained from the following [HuggingFace dataset](https://huggingface.co/datasets/Kaichengalex/YFCC15M).
 
 ## 2.Training Feature Decoder
-pass
+```python
+python -m multi_gpus_train.py --distributed --device_ids 0 1 2 3 --train_data YOUR_img2dataset_CC3M_AND_CC12M_tar_PATH --val_data YOUR_VALDATA_tar_PATH --batch_size 832 --num_of_epochs 32
+```
+
+ Example:
+
+```python
+python -m multi_gpus_train.py --distributed --device_ids 0 1 2 3 --train_data "/root/use_data/cc12m/{00000..01242}.tar::/root/use_data/cc3m/{00000..00331}.tar" --val_data "/root/use_data/cc3mval/{00000..00001}.tar" --batch_size 832 --num_of_epochs 32
+```
+
+## 3. Constructing Poisoned Dataset
+
+```python
+In the process of organizing ..
+```
+
+## 4. Training Victim Model
+
+```python
+python -m main --name Any_taskname_you_want --train_data YOUR_TRAIN_DATA.csv --validation_data YOUR_VAL_DATA.csv --image_key path --caption_key caption --device_ids 0 1 2 3 --distributed --batch_size 512 --epochs 10
+```
+
+ Example:
+
+```python
+python -m main --name Any_taskname_you_want --train_data /root/Poisoned/AttackIII/attack_csv/cc3m_poisoned.csv --validation_data  /root/public/val.csv --image_key path --caption_key caption --device_ids 0 1 2 3 --distributed --batch_size 512 --epochs 10
+```
 
 ------------------------------------
 
