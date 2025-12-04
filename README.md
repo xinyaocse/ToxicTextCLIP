@@ -1,5 +1,6 @@
 <div align="center">
 
+
 # ToxicTextCLIP: Text-Based Poisoning and Backdoor Attacks on CLIP Pre-training
 
 ![NeurIPS 2025](https://img.shields.io/badge/NeurIPS--2025-Accepted-blueviolet)</br>
@@ -47,14 +48,15 @@ We evaluate ToxicTextCLIP on three widely-used large-scale image–text datasets
 - **YFCC15M** is obtained from the following [HuggingFace dataset](https://huggingface.co/datasets/Kaichengalex/YFCC15M).
 
 ## 2.Training Feature Decoder
+
 ```python
-python -m multi_gpus_train.py --distributed --device_ids 0 1 2 3 --train_data YOUR_img2dataset_CC3M_AND_CC12M_tar_PATH --val_data YOUR_VALDATA_tar_PATH --batch_size 832 --num_of_epochs 32
+python -m train_scripts.multi_gpus_train --distributed --device_ids 0 1 2 3 --train_data YOUR_img2dataset_CC3M_AND_CC12M_tar_PATH --val_data YOUR_VALDATA_tar_PATH --batch_size 832 --num_of_epochs 32
 ```
 
  Example:
 
 ```python
-python -m multi_gpus_train.py --distributed --device_ids 0 1 2 3 --train_data "/root/use_data/cc12m/{00000..01242}.tar::/root/use_data/cc3m/{00000..00331}.tar" --val_data "/root/use_data/cc3mval/{00000..00001}.tar" --batch_size 832 --num_of_epochs 32
+python -m train_scripts.multi_gpus_train --distributed --device_ids 0 1 2 3 --train_data "/root/use_data/cc12m/{00000..01242}.tar::/root/use_data/cc3m/{00000..00331}.tar" --val_data "/root/use_data/cc3mval/{00000..00001}.tar" --batch_size 832 --num_of_epochs 32
 ```
 
 ## 3. Constructing Poisoned Dataset
@@ -78,6 +80,7 @@ python -m main --name Any_taskname_you_want --train_data /root/Poisoned/AttackII
 ------------------------------------
 
 ## 📝 Citation
+
 If you find this work helpful, please cite our paper:
 
 ``` bibtex
