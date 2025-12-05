@@ -1,6 +1,7 @@
 <div align="center">
 
 
+
 # ToxicTextCLIP: Text-Based Poisoning and Backdoor Attacks on CLIP Pre-training
 
 ![NeurIPS 2025](https://img.shields.io/badge/NeurIPS--2025-Accepted-blueviolet)</br>
@@ -76,6 +77,17 @@ python -m main --name Any_taskname_you_want --train_data YOUR_TRAIN_DATA.csv --v
 ```python
 python -m main --name Any_taskname_you_want --train_data /root/Poisoned/AttackIII/attack_csv/cc3m_poisoned.csv --validation_data  /root/public/val.csv --image_key path --caption_key caption --device_ids 0 1 2 3 --distributed --batch_size 512 --epochs 10
 ```
+
+------------------------------------
+
+## 🙏 Acknowledgements
+
+Part of the code in this repository is adapted from the following open-source projects. We sincerely appreciate their contributions to the community:
+
++ [RoCLIP](https://github.com/uguess1/RoCLIP_bck)
++ [openai](https://github.com/openai/CLIP)
++ [open_clip](https://github.com/mlfoundations/open_clip)
++ [pytorch-original-transformer](https://github.com/gordicaleksa/pytorch-original-transformer/tree/main)
 
 ------------------------------------
 
