@@ -85,7 +85,7 @@ python -m main --name Any_taskname_you_want --train_data /root/Poisoned/AttackII
 Part of the code in this repository is adapted from the following open-source projects. We sincerely appreciate their contributions to the community:
 
 + [RoCLIP](https://github.com/uguess1/RoCLIP_bck)
-+ [openai](https://github.com/openai/CLIP)
++ [CLIP](https://github.com/openai/CLIP)
 + [open_clip](https://github.com/mlfoundations/open_clip)
 + [pytorch-original-transformer](https://github.com/gordicaleksa/pytorch-original-transformer/tree/main)
 
