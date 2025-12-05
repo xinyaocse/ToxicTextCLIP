@@ -10,7 +10,7 @@
 
 ## 🆕 What's New?
 
-- **[2025/12/03]** ==We are actively refining the code structure and improving the README documentation to enhance clarity and usability.==
+- **[2025/12/03]** We are actively refining the code structure and improving the README documentation to enhance clarity and usability.
 - **[2025/09/18]** ToxicTextCLIP has been officially accepted to **NeurIPS 2025**!
 - **[2025/05/25]** Released the initial, unrefined version of our project code.
 
